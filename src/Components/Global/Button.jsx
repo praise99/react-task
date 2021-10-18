@@ -26,7 +26,7 @@ const BaseButton = styled.button`
 const CustomButton = ({onClick,children, ...rest }) => {
   return(
     <Wrapper>
-      <BaseButton type="submit" onClick={onClick} {...rest}>{children}</BaseButton>;
+      <BaseButton type="submit" onClick={onClick} {...rest}>{children}</BaseButton>
     </Wrapper>
   )
 };
