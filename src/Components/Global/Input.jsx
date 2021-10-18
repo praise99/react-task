@@ -46,7 +46,7 @@ const BvnInput=styled(InputWrapper)`
   font-style: normal;
   font-weight: 500;
   font-size: ${({theme}) => theme.fontSize.xs3};
-  color: ${({theme}) => theme.colors.gray};
+  color: ${({theme}) => theme.colors.dark};
   background-color: ${({theme}) => theme.colors.white};
 
 
