@@ -44,7 +44,7 @@ const theme = {
   responsive: {
     ipad: '768px',
     mobile:"500px",
-    laptop:"1200px"
+    laptop:"1250px"
   },
 
   letterSpacing: {

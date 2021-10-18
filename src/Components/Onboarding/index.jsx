@@ -30,6 +30,9 @@ const Wrapper=styled.div`
         display: flex;
         align-items: center;
         margin-right: 40px;
+        @media(min-width: ${({ theme }) => theme.responsive.ipad}) and (max-width: ${({ theme }) => theme.responsive.laptop}){
+            margin-right: 10px;
+        }
     }
     .tabs{
         cursor: pointer;
@@ -46,6 +49,9 @@ const Wrapper=styled.div`
         padding-top: 69px;
         display: flex;
         align-items: center;
+        @media(min-width: ${({ theme }) => theme.responsive.ipad}) and (max-width: ${({ theme }) => theme.responsive.laptop}){
+            width:100%;
+        }
     }
     .line{
         background-color:${({ theme }) => theme.colors.grey};

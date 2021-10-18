@@ -1,8 +1,7 @@
 import React,{useState} from 'react'
 import styled from "styled-components"
 import {VerifyButton} from "../Global/Button"
-import {ContinueButton} from "../Global/Button"
-import { Link } from "react-router-dom";
+
 
 import {Bvn} from "./Bvn"
 import { PhoneNo } from './PhoneNo'
@@ -78,12 +77,6 @@ const VerifyAccount = () => {
                 </div>
                 <div className={toggleState=== 2 ? "contents active-content":"content"}>
                     <Bvn/>
-                </div>
-                <div className="line"></div>
-                <div className="continue">
-                    <Link to="/socials">
-                        <ContinueButton>Continue</ContinueButton>
-                    </Link>
                 </div>
         </VerifyAcctWrapper>
     )

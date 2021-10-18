@@ -26,7 +26,7 @@ const BaseButton = styled.button`
 const CustomButton = ({onClick,children, ...rest }) => {
   return(
     <Wrapper>
-      <BaseButton onClick={onClick} {...rest}>{children}</BaseButton>;
+      <BaseButton type="submit" onClick={onClick} {...rest}>{children}</BaseButton>;
     </Wrapper>
   )
 };
@@ -52,6 +52,11 @@ const VerifyButton = styled(CustomButton)`
     height:41px;
     border: 1px solid rgba(20, 23, 55, 0.1);
     background: ${({ theme }) => theme.colors.dirtyWhite};
+    @media(max-width: 375px){
+      padding: 4px 10px 5px;
+      font-size: 10px;
+
+    }
 `;
 const SocialButton = styled(CustomButton)`
     width:217px;

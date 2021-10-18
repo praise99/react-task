@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styled from "styled-components"
 import {BvnInput} from "../Global/Input"
 import {SocialButton} from "../Global/Button"
@@ -64,8 +64,57 @@ const SocialWrapper=styled.div`
         height: 1px;
         margin:48px 0px 13px 0px;
     }
+    .error-msg{
+        font-size:13px;
+        width:100%;
+        color:red;
+        margin-top: 4px;
+    }
+    .disable{
+        opacity:0.5;
+    }
 `
 const SocialMedia = () => {
+    const [instagram,setInstagram]=useState('');
+    const [instaError,setInstaError]=useState('')
+
+    const [abegTag,setAbegTag]=useState('');
+    const [abegTagError,setAbegTagError]=useState('');
+
+    const [twitter,settwitterTag]=useState('');
+    const [twitterError,settwitterError]=useState('');
+
+    const handleAbegChange=(e)=>{
+        setAbegTagError("")
+        setAbegTag(e.target.value)
+    }
+    const handleInstaChange=(e)=>{
+        setInstaError('')
+        setInstagram(e.target.value)
+    }
+    const handleTwitterChange=(e)=>{
+        settwitterError('')
+        settwitterTag(e.target.value)
+    }
+
+
+    const alertUser=()=>{
+        if(instagram!==''){
+
+        }else{
+            setInstaError('Instagram handle required')
+        }
+        if(abegTag!==''){
+
+        }else{
+            setAbegTagError('Abeg Tag required')
+        }
+        if(twitter!==''){
+
+        }else{
+            settwitterError('Twitter handle required')
+        }
+    }
     return (
         <SocialWrapper>
                 <div>
@@ -75,25 +124,30 @@ const SocialMedia = () => {
                 </div>
                 <div className="number">
                     <p>Choose your Abeg Tag (required)</p>
-                    <BvnInput type="text" name="Abeg Tag" placeholder="@"/>
+                    <BvnInput type="text" name="Abeg Tag" placeholder="@" onChange={handleAbegChange} value={abegTag} />
+                    {abegTagError&&<div className="error-msg">{abegTagError}</div>}
                 </div>
                 <div className="handle">
                     <div className="numberh">
                         <p>Instagram</p>
-                        <BvnInput type="text" name="Instagram" placeholder="@"/>
+                        <BvnInput type="text" name="Instagram" placeholder="@" onChange={handleInstaChange} value={instagram}/>
+                        {instaError&&<div className="error-msg">{instaError}</div>}
                     </div>
                     <div className="bank">
                         <p>Twitter</p>
-                        <BvnInput type="text" name="Twitter" placeholder="@"/>
+                        <BvnInput type="text" name="Twitter" placeholder="@" onChange={handleTwitterChange} value={twitter}/>
+                        {twitterError&&<div className="error-msg">{twitterError}</div>}
                     </div>
                 </div>
                 <div className="line"></div>
+
                 <div className="continue">
-                    <Link to="/business">
-                        <SocialButton>Confirm Social Handles</SocialButton>
+                    <Link to={instagram!==''&& abegTag!=='' && twitter!=='' ? "/business":"#"} onClick={alertUser} >
+                        <SocialButton className={instagram==''&& abegTag=='' && twitter=='' ? "disable":""} >Confirm Social Handles</SocialButton>
                     </Link>
                 </div>
         </SocialWrapper>
+        // </form>
     )
 }
 
