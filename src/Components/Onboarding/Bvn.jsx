@@ -75,7 +75,7 @@ const Bvn = () => {
         setbvn(e.target.value)
     }
     const alertUser=()=>{
-        if(bvn.length==11){
+        if(bvn.length===11){
 
         }else{
             setbvnError('BVN must be up to 11 digits')
@@ -90,7 +90,7 @@ const Bvn = () => {
             <Accordion/>
             <div className="line"></div>
             <div className="continue">
-                <Link to={bvn.length==11 ? "/socials":"#"} onClick={alertUser}>
+                <Link to={bvn.length===11 ? "/socials":"#"} onClick={alertUser}>
                     <ContinueButton className={bvn.length!==11 ? "disable hvr-bounce-to-right":"hvr-bounce-to-right"}>Continue</ContinueButton>
                 </Link>
             </div>

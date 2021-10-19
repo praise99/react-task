@@ -183,7 +183,7 @@ const SocialMedia = () => {
 
                 <div className="continue">
                     <Link to={instagram!==''&& abegTag!=='' && twitter!=='' ? "/business":"#"} onClick={alertUser} >
-                        <SocialButton className={instagram==''&& abegTag=='' && twitter=='' ? "disable hvr-bounce-to-right":"hvr-bounce-to-right"} >Confirm Social Handles</SocialButton>
+                        <SocialButton className={instagram===''&& abegTag==='' && twitter==='' ? "disable hvr-bounce-to-right":"hvr-bounce-to-right"} >Confirm Social Handles</SocialButton>
                     </Link>
                 </div>
         </SocialWrapper>

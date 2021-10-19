@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import styled from "styled-components"
 import {LogOutButton} from "../Global/Button"
 import {VerifyAccount} from "./VerifyAccount"
@@ -102,7 +102,7 @@ const Wrapper=styled.div`
   transition-timing-function: ease-out;
 }
 .hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active {
-  color: white;
+  color: ${({ theme }) => theme.colors.dark};
 }
 .hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before, .hvr-shutter-out-horizontal:active:before {
   -webkit-transform: scaleX(1);

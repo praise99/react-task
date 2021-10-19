@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {OnBoarding} from "./Pages/OnBoarding"
 import {Business} from "./Pages/Business"

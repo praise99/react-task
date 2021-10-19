@@ -56,20 +56,7 @@ const theme = {
   }
 };
 
-const darkTheme = {
-  colors: {
-    primary: "red",
-    secondary: "#F3E8C9",
-    accent: "#a8affc",
-  },
 
-  fontFamily: {
-    interSemiBold: "Inter-SemiBold",
-    interBold: "Inter-Bold",
-    interRegular: "Inter-Regular",
-    interLight: "Inter-Light",
-  },
-};
 
 
 

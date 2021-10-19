@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components';
-import {Dropdown} from "../../Assets"
 
 const selectContainer = styled.div`
 
@@ -51,7 +50,7 @@ const Customselect=styled(selectWrapper)`
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
-        background: url('https://i.postimg.cc/BnsttTZb/arrow-drop-down.png') 96% / 15% no-repeat ${({theme}) => theme.colors.white}; 
+        background: url('https://i.postimg.cc/BnsttTZb/arrow-drop-down.png') 96% / 8% no-repeat ${({theme}) => theme.colors.white}; 
         &::-ms-expand {
             display: none; /* Remove default arrow in Internet Explorer 10 and 11 */
           } 

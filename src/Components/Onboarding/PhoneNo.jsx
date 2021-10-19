@@ -89,7 +89,7 @@ const PhoneNo = () => {
         setacctNo(e.target.value)
     }
     const alertUser=()=>{
-        if(acctNo.length==10){
+        if(acctNo.length===10){
 
         }else{
             setacctNoError('Account Number must be up to 10 digits')
@@ -111,7 +111,7 @@ const PhoneNo = () => {
         </AccountWrapper>
         <div className="line"></div>
                 <div className="continue">
-                    <Link to={acctNo.length==10 ? "/socials":"#"} onClick={alertUser}>
+                    <Link to={acctNo.length===10 ? "/socials":"#"} onClick={alertUser}>
                         <ContinueButton className={acctNo.length!==10 ? "disable hvr-bounce-to-right":"hvr-bounce-to-right"}>Continue</ContinueButton>
                     </Link>
         </div>
