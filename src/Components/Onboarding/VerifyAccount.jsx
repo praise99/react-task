@@ -52,6 +52,76 @@ const VerifyAcctWrapper=styled.div`
         height: 1px;
         margin:48px 0px 13px 0px;
     }
+    /* Wobble Vertical */
+@-webkit-keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.hvr-wobble-vertical {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-wobble-vertical:hover, .hvr-wobble-vertical:focus, .hvr-wobble-vertical:active {
+  -webkit-animation-name: hvr-wobble-vertical;
+  animation-name: hvr-wobble-vertical;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
 `
 const VerifyAccount = () => {
     const [toggleState, setToggleState] = useState(1);
@@ -68,8 +138,8 @@ const VerifyAccount = () => {
                 <div>
                     <p className="verification">Select a verification method</p>
                     <div className="buttons">
-                        <VerifyButton className={toggleState===1 ? "tabs active-tabs":"tabs"}  onClick={()=>toggleTab(1)}>BVN</VerifyButton>
-                        <VerifyButton  className={toggleState===2 ? "personal active-tabs tabs":"personal tabs"} onClick={()=>toggleTab(2)}>Personal Account Number</VerifyButton>
+                        <VerifyButton className={toggleState===1 ? "tabs active-tabs hvr-wobble-vertical":"tabs hvr-wobble-vertical"}  onClick={()=>toggleTab(1)}>BVN</VerifyButton>
+                        <VerifyButton  className={toggleState===2 ? "personal active-tabs tabs hvr-wobble-vertical":"personal tabs hvr-wobble-vertical"} onClick={()=>toggleTab(2)}>Personal Account Number</VerifyButton>
                     </div>
                 </div>
                 <div className={toggleState=== 1 ? "contents active-content":"content"}>

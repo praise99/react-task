@@ -38,6 +38,9 @@ const LogOutButton = styled(CustomButton)`
     height:50px;
     background-color:${({ theme }) => theme.colors.red} ;
     color: ${({ theme }) => theme.colors.white};
+    @media(max-width: ${({ theme }) => theme.responsive.ipad}){
+            display: none;
+        }
 `;
 const ContinueButton = styled(CustomButton)`
     width:125px;
@@ -52,6 +55,7 @@ const VerifyButton = styled(CustomButton)`
     height:41px;
     border: 1px solid rgba(20, 23, 55, 0.1);
     background: ${({ theme }) => theme.colors.dirtyWhite};
+    
     @media(max-width: 375px){
       padding: 4px 10px 5px;
       font-size: 10px;
