@@ -5,6 +5,7 @@ import {Verify} from "../Components/Onboarding"
 const OnboardWrapper=styled.div`
     display: flex;
     width: 100%;
+
 `
 const OnBoarding = () => {
     return (
